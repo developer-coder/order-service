@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    image: order-service:latest
+    container_name: order-application
+    ports:
+      - "9023:9023"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    restart: unless-stopped
